@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 enum AppEnvironment {
   dev,
   qa,
@@ -9,14 +11,13 @@ class AppConfig {
   final String appTitle;
   final String apiBaseUrl;
   final bool enableVerboseLogging;
-  final bool isDebugMode;
+  final bool isDebugMode = kDebugMode;
 
   const AppConfig({
     required this.environment,
     required this.appTitle,
     required this.apiBaseUrl,
     required this.enableVerboseLogging,
-    required this.isDebugMode,
   });
 
   bool get isProduction => environment == AppEnvironment.prod;

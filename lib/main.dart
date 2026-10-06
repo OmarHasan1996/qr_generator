@@ -17,7 +17,6 @@ void main() async {
     appTitle: 'QR Code Generator',
     apiBaseUrl: 'https://api.qrgenerator.com',
     enableVerboseLogging: false,
-    isDebugMode: false,
   );
   await runQrApp(defaultConfig);
 }

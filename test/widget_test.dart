@@ -11,7 +11,6 @@ void main() {
       appTitle: 'QR Code Generator Test',
       apiBaseUrl: 'https://test.api',
       enableVerboseLogging: false,
-      isDebugMode: false,
     );
 
     AppConfig.initialize(config);
