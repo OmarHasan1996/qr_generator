@@ -1,6 +1,5 @@
 import 'core/config/app_config.dart';
 import 'main.dart';
-import 'package:flutter/foundation.dart';
 
 void main() async {
   const devConfig = AppConfig(
@@ -8,7 +7,7 @@ void main() async {
     appTitle: 'QR Generator [DEV]',
     apiBaseUrl: 'https://dev-api.qrgenerator.com',
     enableVerboseLogging: true,
-    isDebugMode: kDebugMode,
+    isDebugMode: true,
   );
   await runQrApp(devConfig);
 }

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'core/config/app_config.dart';
 import 'core/di/app_di.dart';
 import 'presentation/views/qr_generator_screen.dart';
-import 'package:flutter/foundation.dart';
 
 Future<void> runQrApp(AppConfig config) async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +17,7 @@ void main() async {
     appTitle: 'QR Code Generator',
     apiBaseUrl: 'https://api.qrgenerator.com',
     enableVerboseLogging: false,
-    isDebugMode: kDebugMode,
+    isDebugMode: false,
   );
   await runQrApp(defaultConfig);
 }
