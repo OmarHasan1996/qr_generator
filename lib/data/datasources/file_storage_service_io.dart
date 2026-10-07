@@ -11,7 +11,7 @@ class FileStorageServiceImpl implements FileStorageService {
   @override
   Future<String?> pickSaveDirectory() async {
     try {
-      final String? selectedDirectory = await FilePicker.platform.getDirectoryPath(
+      final String? selectedDirectory = await FilePicker.getDirectoryPath(
         dialogTitle: 'Select Directory to Save QR Code',
       );
       return selectedDirectory;

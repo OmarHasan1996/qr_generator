@@ -25,7 +25,7 @@ class SaveQrCodeUseCase {
       throw ArgumentError('Cannot save empty image data.');
     }
 
-    final fileName = customFileName ?? 'qr_code_${DateTime.now().millisecondsSinceEpoch}.png';
+    final fileName = customFileName ?? 'qr_code_${DateTime.now().millisecondsSinceEpoch}.jpg';
 
     logger.info(
       'SaveQrCodeUseCase: Saving QR image file=$fileName size=${imageBytes.length} bytes, dir=$customDirectory',

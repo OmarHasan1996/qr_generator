@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.qr.generator.qr_generator"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 37
     ndkVersion = flutter.ndkVersion
 
     compileOptions {

@@ -20,7 +20,7 @@ class FileStorageServiceImpl implements FileStorageService {
     required String fileName,
     String? customDirectory,
   }) async {
-    final blob = web.Blob([bytes.toJS].toJS, web.BlobPropertyBag(type: 'image/png'));
+    final blob = web.Blob([bytes.toJS].toJS, web.BlobPropertyBag(type: 'image/jpeg'));
     final url = web.URL.createObjectURL(blob);
     final anchor = web.document.createElement('a') as web.HTMLAnchorElement;
     anchor.href = url;

@@ -30,7 +30,7 @@ void main() {
       when(() => mockRepository.generateQrImage(
             text: input,
             logoBytes: null,
-            size: 300.0,
+            size: 512.0,
           )).thenAnswer((_) async => expectedBytes);
 
       // When
@@ -41,7 +41,7 @@ void main() {
       verify(() => mockRepository.generateQrImage(
             text: input,
             logoBytes: null,
-            size: 300.0,
+            size: 512.0,
           )).called(1);
     });
 
@@ -61,7 +61,7 @@ void main() {
       when(() => mockRepository.generateQrImage(
             text: input,
             logoBytes: null,
-            size: 300.0,
+            size: 512.0,
           )).thenThrow(exception);
 
       // When & Then

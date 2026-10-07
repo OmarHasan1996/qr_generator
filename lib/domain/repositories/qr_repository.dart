@@ -5,6 +5,6 @@ abstract class QrRepository {
   Future<Uint8List> generateQrImage({
     required String text,
     Uint8List? logoBytes,
-    double size = 300.0,
+    double size = 500.0,
   });
 }

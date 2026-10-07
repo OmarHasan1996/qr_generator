@@ -14,7 +14,7 @@ class GenerateQrCodeUseCase {
   Future<Uint8List> execute({
     required String text,
     Uint8List? logoBytes,
-    double size = 300.0,
+    double size = 512.0,
   }) async {
     final trimmedText = text.trim();
     if (trimmedText.isEmpty) {

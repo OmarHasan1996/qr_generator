@@ -27,9 +27,9 @@ void main() {
       // Given
       const text = 'test string';
       final expectedBytes = Uint8List.fromList([100, 200]);
-      when(() => mockQrService.generateQrPngBytes(
+      when(() => mockQrService.generateQrJpgBytes(
             text: text,
-            size: 300.0,
+            size: 500.0,
             logoBytes: null,
           )).thenAnswer((_) async => expectedBytes);
 
@@ -38,9 +38,9 @@ void main() {
 
       // Then
       expect(result, equals(expectedBytes));
-      verify(() => mockQrService.generateQrPngBytes(
+      verify(() => mockQrService.generateQrJpgBytes(
             text: text,
-            size: 300.0,
+            size: 500.0,
             logoBytes: null,
           )).called(1);
     });
@@ -49,9 +49,9 @@ void main() {
       // Given
       const text = 'test string';
       final exception = Exception('Service error');
-      when(() => mockQrService.generateQrPngBytes(
+      when(() => mockQrService.generateQrJpgBytes(
             text: text,
-            size: 300.0,
+            size: 500.0,
             logoBytes: null,
           )).thenThrow(exception);
 

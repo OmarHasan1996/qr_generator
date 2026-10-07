@@ -16,19 +16,19 @@ class QrRepositoryImpl implements QrRepository {
   Future<Uint8List> generateQrImage({
     required String text,
     Uint8List? logoBytes,
-    double size = 300.0,
+    double size = 500.0,
   }) async {
-    logger.info('QrRepositoryImpl: Requesting QR generation from service', tag: 'Data');
+    logger.info('QrRepositoryImpl: Requesting QR JPG generation from service', tag: 'Data');
     try {
-      final pngBytes = await qrService.generateQrPngBytes(
+      final jpgBytes = await qrService.generateQrJpgBytes(
         text: text,
         size: size,
         logoBytes: logoBytes,
       );
-      return pngBytes;
+      return jpgBytes;
     } catch (e, stackTrace) {
       logger.error(
-        'QrRepositoryImpl: Error generating QR PNG',
+        'QrRepositoryImpl: Error generating QR JPG',
         tag: 'Data',
         error: e,
         stackTrace: stackTrace,
